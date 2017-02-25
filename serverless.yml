@@ -80,6 +80,11 @@ functions:
 #            detail:
 #              state:
 #                - pending
+    events:
+      - http:
+          path: hello
+          method: get
+          cors: true
 
 #    Define function environment variables here
 #    environment:

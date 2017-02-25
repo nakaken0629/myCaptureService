@@ -1,5 +1,21 @@
 <html>
+ <head>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script type='text/javascript'>
+$.ajax({
+  method: 'GET',
+  url: 'https://o1spiup973.execute-api.us-east-1.amazonaws.com/dev/hello',
+  crossDomain: true
+})
+  .done(function(data) {
+    $('p#message').text(data.message);
+  });
+</script>
+ </head>
  <body>
-  <p>hello world!</p>
+  <p id='message'>(loading..)</p>
  </body>
 </html>
